@@ -5,13 +5,6 @@ services:
     buildCommand: "pip install -r requirements.txt"
     startCommand: "streamlit run hppapp.py --server.port $PORT --server.address 0.0.0.0"
     plan: free
-    instanceCount: 1
-    instanceSize: free  
-    sourceDirectory: .
-    mounts:
-      - type: volume
-        name: house-price-volume
-        mountPath: /mnt/volumes/house-price-volume
     envVars:
       - key: PORT
         value: "8080"
